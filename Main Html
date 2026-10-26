@@ -8,6 +8,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Timmana&family=Jaini&display=swap" rel="stylesheet">
 	<title>Cecilia's Homemade Foodies</title>
+
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -181,13 +183,253 @@
 </main>
 
 
-<!-- POP-UP (opened by the "Select more" buttons) -->
+<!-- FOOD CATALOG POP-UP: opens when the user clicks Select more / See all -->
 <div id="more-popup" popover class="more-popup">
   <button type="button" class="popup-close" popovertarget="more-popup" popovertargetaction="hide" aria-label="Close">&times;</button>
-  <h2>More from our kitchen</h2>
-  <p>Put whatever you want here: extra dishes, a link to the full menu, a request form...</p>
+
+  <div class="popup-heading">
+    <div class="popup-brand-icon" aria-hidden="true">♡</div>
+    <div class="popup-heading-text">
+      <h2>More from our kitchen <span>♡</span></h2>
+      <p class="popup-description">Explore more of our homemade meals, snacks and special packages. Find your next favorite dish!</p>
+    </div>
+    <label class="food-search">
+      <span aria-hidden="true">⌕</span>
+      <input type="search" id="food-search-input" placeholder="Search food..." aria-label="Search food products">
+    </label>
+  </div>
+
+  <div class="popup-toolbar">
+    <div class="popup-categories" aria-label="Filter food category">
+      <button type="button" class="popup-category active" data-category="All">All</button>
+      <button type="button" class="popup-category" data-category="Lunch">Lunch</button>
+      <button type="button" class="popup-category" data-category="Snacks">Snacks</button>
+      <button type="button" class="popup-category" data-category="Desserts">Desserts</button>
+      <button type="button" class="popup-category" data-category="Packages">Packages</button>
+    </div>
+    <p class="popup-item-count"><span aria-hidden="true">♜</span> Showing <strong id="food-item-count">15</strong> items</p>
+  </div>
+
+  <div class="popup-food-grid" id="popup-food-grid">
+    <article class="popup-food-card" data-name="nilaga" data-category="Lunch">
+      <img src="Nilaga.jpg" alt="Nilaga" loading="lazy">
+      <div class="popup-food-info"><h3>Nilaga</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="chicken afritada" data-category="Lunch">
+      <img src="CHICKEN AFRITADA.jpg" alt="Chicken Afritada" loading="lazy">
+      <div class="popup-food-info"><h3>Chicken Afritada</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="bicol express" data-category="Lunch">
+      <img src="BICOL EXPRESS.jpg" alt="Bicol Express" loading="lazy">
+      <div class="popup-food-info"><h3>Bicol Express</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="chicken fingers" data-category="Snacks">
+      <img src="Chicken Fingers.jpg" alt="Chicken Fingers" loading="lazy">
+      <div class="popup-food-info"><h3>Chicken Fingers</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="kare-kare" data-category="Lunch">
+      <img src="BEEF KARE KARE.jpg" alt="Kare-Kare" loading="lazy">
+      <div class="popup-food-info"><h3>Kare-Kare</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="chicken mushroom" data-category="Lunch">
+      <img src="CHICKEN MUSHROOM.jpg" alt="Chicken Mushroom" loading="lazy">
+      <div class="popup-food-info"><h3>Chicken Mushroom</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="sweet and sour pork" data-category="Lunch">
+      <img src="CHICKEN AFRITADA.jpg" alt="Sweet and Sour Pork" loading="lazy">
+      <div class="popup-food-info"><h3>Sweet and Sour Pork</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="pancit bihon" data-category="Lunch">
+      <img src="CHICKEN MUSHROOM.jpg" alt="Pancit Bihon" loading="lazy">
+      <div class="popup-food-info"><h3>Pancit Bihon</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="spaghetti" data-category="Snacks">
+      <img src="BICOL EXPRESS.jpg" alt="Spaghetti" loading="lazy">
+      <div class="popup-food-info"><h3>Spaghetti</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="chicken adobo" data-category="Lunch">
+      <img src="CHICKEN AFRITADA.jpg" alt="Chicken Adobo" loading="lazy">
+      <div class="popup-food-info"><h3>Chicken Adobo</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="lumpiang shanghai" data-category="Snacks">
+      <img src="Chicken Fingers.jpg" alt="Lumpiang Shanghai" loading="lazy">
+      <div class="popup-food-info"><h3>Lumpiang Shanghai</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="garlic fried rice" data-category="Lunch">
+      <img src="Nilaga.jpg" alt="Garlic Fried Rice" loading="lazy">
+      <div class="popup-food-info"><h3>Garlic Fried Rice</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="pinakbet" data-category="Lunch">
+      <img src="BEEF KARE KARE.jpg" alt="Pinakbet" loading="lazy">
+      <div class="popup-food-info"><h3>Pinakbet</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="halo-halo" data-category="Desserts">
+      <img src="CHICKEN MUSHROOM.jpg" alt="Halo-Halo" loading="lazy">
+      <div class="popup-food-info"><h3>Halo-Halo</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+    <article class="popup-food-card" data-name="leche flan" data-category="Desserts">
+      <img src="BICOL EXPRESS.jpg" alt="Leche Flan" loading="lazy">
+      <div class="popup-food-info"><h3>Leche Flan</h3><p>₱65</p></div>
+      <button type="button" class="popup-cart-btn">🛒 &nbsp; ADD TO CART</button>
+    </article>
+  </div>
+  <p class="popup-no-results" id="popup-no-results" hidden>No food products found. Try another search.</p>
 </div>
 
+
+<!-- ORDER DETAILS POP-UP -->
+<div class="order-modal" id="order-modal" popover="manual" aria-hidden="true">
+  <div class="order-modal-backdrop" data-close-order></div>
+  <section class="order-card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+    <button type="button" class="order-close" data-close-order aria-label="Close order form">&times;</button>
+    <p class="order-eyebrow">CECILIA'S HOMEMADE FOODIES</p>
+    <h2 id="order-title">Customize your order ♡</h2>
+    <div class="order-product">
+      <img id="order-food-image" src="" alt="">
+      <div><h3 id="order-food-name">Food name</h3><p id="order-food-price">₱65</p></div>
+    </div>
+    <form id="order-form">
+      <label for="order-quantity">Number of servings</label>
+      <div class="quantity-control">
+        <button type="button" id="quantity-minus" aria-label="Decrease servings">−</button>
+        <input type="number" id="order-quantity" min="1" max="99" value="1" required>
+        <button type="button" id="quantity-plus" aria-label="Increase servings">+</button>
+      </div>
+      <label for="delivery-date">Delivery date</label>
+      <input type="date" id="delivery-date" required>
+      <label for="delivery-time">Preferred delivery time</label>
+      <input type="time" id="delivery-time" required>
+      <div class="order-total"><span>Total</span><strong id="order-total-price">₱65</strong></div>
+      <button type="submit" class="confirm-order-btn">Add order to cart</button>
+    </form>
+  </section>
+</div>
+<div class="order-toast" id="order-toast" role="status" aria-live="polite"></div>
+
+<script>
+  // Food catalog search and category filters
+  const foodSearchInput = document.getElementById('food-search-input');
+  const foodCategoryButtons = document.querySelectorAll('.popup-category');
+  const popupFoodCards = document.querySelectorAll('.popup-food-card');
+  const foodItemCount = document.getElementById('food-item-count');
+  const noFoodResults = document.getElementById('popup-no-results');
+  let selectedFoodCategory = 'All';
+
+  function filterPopupFoods() {
+    const searchTerm = foodSearchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    popupFoodCards.forEach(card => {
+      const matchesName = card.dataset.name.includes(searchTerm);
+      const matchesCategory = selectedFoodCategory === 'All' || card.dataset.category === selectedFoodCategory;
+      const showCard = matchesName && matchesCategory;
+      card.hidden = !showCard;
+      if (showCard) visibleCount++;
+    });
+    foodItemCount.textContent = visibleCount;
+    noFoodResults.hidden = visibleCount !== 0;
+  }
+  foodSearchInput.addEventListener('input', filterPopupFoods);
+  foodCategoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      selectedFoodCategory = button.dataset.category;
+      foodCategoryButtons.forEach(item => item.classList.toggle('active', item === button));
+      filterPopupFoods();
+    });
+  });
+
+  // Order details modal: choose servings and preferred delivery date/time
+  const orderModal = document.getElementById('order-modal');
+  const orderForm = document.getElementById('order-form');
+  const quantityInput = document.getElementById('order-quantity');
+  const orderName = document.getElementById('order-food-name');
+  const orderPrice = document.getElementById('order-food-price');
+  const orderImage = document.getElementById('order-food-image');
+  const totalPrice = document.getElementById('order-total-price');
+  const toast = document.getElementById('order-toast');
+  let selectedProductPrice = 65;
+  let selectedProduct = '';
+  let selectedImage = '';
+  const orderCart = [];
+
+  function updateOrderTotal() {
+    let quantity = Number.parseInt(quantityInput.value, 10);
+    if (!Number.isFinite(quantity) || quantity < 1) quantity = 1;
+    if (quantity > 99) quantity = 99;
+    quantityInput.value = quantity;
+    totalPrice.textContent = '₱' + (selectedProductPrice * quantity).toLocaleString('en-PH');
+  }
+
+  function openOrderModal(card) {
+    selectedProduct = card.querySelector('h3').textContent.trim();
+    selectedImage = card.querySelector('img').getAttribute('src');
+    selectedProductPrice = Number(card.querySelector('.popup-food-info p').textContent.replace(/[^0-9.]/g, '')) || 65;
+    orderName.textContent = selectedProduct;
+    orderPrice.textContent = '₱' + selectedProductPrice.toLocaleString('en-PH') + ' per serving';
+    orderImage.src = selectedImage;
+    orderImage.alt = selectedProduct;
+    quantityInput.value = 1;
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    document.getElementById('delivery-date').min = localToday;
+    document.getElementById('delivery-date').value = localToday;
+    document.getElementById('delivery-time').value = '12:00';
+    updateOrderTotal();
+    // Show the order form in the browser's top layer, above the food catalog pop-up.
+    if (!orderModal.matches(':popover-open')) orderModal.showPopover();
+    orderModal.classList.add('open');
+    orderModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  }
+
+  function closeOrderModal() {
+    orderModal.classList.remove('open');
+    if (orderModal.matches(':popover-open')) orderModal.hidePopover();
+    orderModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  document.querySelectorAll('.popup-cart-btn').forEach(button => {
+    button.addEventListener('click', () => openOrderModal(button.closest('.popup-food-card')));
+  });
+  document.querySelectorAll('[data-close-order]').forEach(button => button.addEventListener('click', closeOrderModal));
+  document.getElementById('quantity-minus').addEventListener('click', () => {
+    quantityInput.value = Math.max(1, (Number.parseInt(quantityInput.value, 10) || 1) - 1);
+    updateOrderTotal();
+  });
+  document.getElementById('quantity-plus').addEventListener('click', () => {
+    quantityInput.value = Math.min(99, (Number.parseInt(quantityInput.value, 10) || 1) + 1);
+    updateOrderTotal();
+  });
+  quantityInput.addEventListener('input', updateOrderTotal);
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeOrderModal(); });
+
+  orderForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const quantity = Number.parseInt(quantityInput.value, 10);
+    const deliveryDate = document.getElementById('delivery-date').value;
+    const deliveryTime = document.getElementById('delivery-time').value;
+    orderCart.push({ food: selectedProduct, price: selectedProductPrice, quantity, deliveryDate, deliveryTime, image: selectedImage });
+    closeOrderModal();
+    toast.textContent = `${quantity} serving(s) of ${selectedProduct} added to cart. Delivery: ${deliveryDate} at ${deliveryTime}.`;
+    toast.classList.add('show');
+    window.setTimeout(() => toast.classList.remove('show'), 4500);
+    console.log('Current order cart:', orderCart);
+  });
+</script>
 
 <!-- FOOTER -->
 <footer class="footer">
