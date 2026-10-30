@@ -1,249 +1,849 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="test1.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Timmana&family=Jaini&display=swap" rel="stylesheet">
-	<title>Cecilia's Homemade Foodies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="test1.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Timmana&family=Jaini&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="banner.css">
+  <title>Cecilia's Homemade Foodies</title>
+
+  <link rel="stylesheet" href="SURE (2).css">
 </head>
 
 <body>
-<header class="site-header">
-  <img src="New_logo.png" alt="Cecilia's Homemade Foodies" class="logo">
+  <header class="site-header">
+    <img src="images/logo.png" alt="Cecilia's Homemade Foodies" class="logo">
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#" class="Selected">HOME</a></li>
-      <li><a href="#">MENU</a></li>
-      <li><a href="#">REQUEST</a></li>
-      <li><a href="#">ABOUT US</a></li>
-      <li><a><img src="Test.svg" alt="Company logo" width="28px" height="25px"></a></li>
-    </ul>
-  </nav>
-</header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="Selected">HOME</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><button type="button" class="header-action-btn" id="open-request">REQUEST</button></li>
+        <li><button type="button" class="header-cart-btn" id="open-cart" aria-label="Open shopping cart">🛒 CART <span
+              id="cart-count">0</span></button></li>
+        <li><a href="#about-us">ABOUT US</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main id="home">
+      <section class="hero-banner">
+        <div class="hero-content">
+          <p class="brand-label">Cecilia's Homemade Foodies</p>
 
-<main>
-  <section class="banner"></section>
+          <h1>
+            Homemade Goodness,<br>
+            Made With Love <span class="heart">♡</span>
+          </h1>
 
-  <div class="container">
+          <p class="hero-description">
+            Enjoy delicious homemade meals, snacks<br class="desktop-break">
+            and packages, perfect for your everyday cravings<br class="desktop-break">
+            and special moments.
+          </p>
 
-    <!-- FOOD OF THE DAY -->
-    <div class="section-title">
-      Food's of the day
-    </div>
-
-    <div class="carousel">
-      <a href="#today-first" class="arrow arrow-left" aria-label="Scroll left">&#10094;</a>
-
-      <div class="food-row">
-
-        <div class="food-card" id="today-first">
-          <img src="Nilaga.jpg" alt="Nilaga">
-          <div class="food-info">
-            <div class="food-name">Nilaga</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
+          <a href="menu.html" class="order-btn">
+            <span class="utensils">♜</span>
+            Order Now
+            <span class="arrow">→</span>
+          </a>
         </div>
 
-        <div class="food-card">
-          <img src="CHICKEN AFRITADA.jpg" alt="Chicken Afritada">
-          <div class="food-info">
-            <div class="food-name">Chicken Afritada</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
+        <div class="hero-image">
+          <img src="images/BANNER.png" alt="Delicious homemade meal with rice, grilled chicken, egg and vegetables">
+        </div>
+      </section>
+
+      <div class="container">
+
+
+        <br>
+        <br>
+
+        <!-- FOOD OF THE DAY -->
+        <div class="section-title" id="food-of-the-day">
+          Food's of the day
         </div>
 
-        <div class="food-card">
-          <img src="BICOL EXPRESS.jpg" alt="Bicol Express">
-          <div class="food-info">
-            <div class="food-name">Bicol Express</div>
-            <div class="price">P65</div>
+        <div class="carousel">
+          <a href="#today-first" class="arrow arrow-left" aria-label="Scroll left">&#10094;</a>
+
+          <div class="food-row">
+
+            <div class="food-card" id="today-first">
+              <img src="images/BEEF NILAGA.jpg" alt="Nilaga">
+              <div class="food-info">
+                <div class="food-name">Nilaga</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card">
+              <img src="images/CHICKEN AFRITADA.jpg" alt="Chicken Afritada">
+              <div class="food-info">
+                <div class="food-name">Chicken Afritada</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card">
+              <img src="images/BICOL EXPRESS.jpg" alt="Bicol Express">
+              <div class="food-info">
+                <div class="food-name">Bicol Express</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card">
+              <img src="images/chickenfingers.jpg" alt="Chicken Fingers">
+              <div class="food-info">
+                <div class="food-name">Chicken Fingers</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card" data-menu-item data-category="LUNCH">
+              <img src="images/BEEF KARE KARE.jpg" alt="Kare kare">
+              <div class="food-info">
+                <div class="food-name">Kare kare</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <!-- SELECT MORE (opens the pop-up) -->
+            <button type="button" class="food-card more-card" id="today-last" popovertarget="more-popup">
+              <span class="more-icon">&#10095;</span>
+              <span class="more-text">Select more</span>
+            </button>
+
           </div>
-          <div class="cart-btn">ADD TO CART</div>
+
+          <a href="#today-last" class="arrow arrow-right" aria-label="Scroll right">&#10095;</a>
         </div>
 
-        <div class="food-card">
-          <img src="Chicken Fingers.jpg" alt="Chicken Fingers">
-          <div class="food-info">
-            <div class="food-name">Chicken Fingers</div>
-            <div class="price">P65</div>
+
+        <!-- MENU -->
+        <div class="menu-header" id="menu">
+
+          <div class="menu-title">
+            Menu
           </div>
-          <div class="cart-btn">ADD TO CART</div>
+
+          <div class="menu-tabs">
+            <button type="button" class="tab active" data-menu-category="LUNCH">LUNCH</button>
+            <button type="button" class="tab" data-menu-category="SNACKS">SNACKS</button>
+            <button type="button" class="tab" data-menu-category="DESSERTS">DESSERTS</button>
+            <button type="button" class="tab" data-menu-category="PACKAGES">PACKAGES</button>
+          </div>
+
         </div>
 
-        <div class="food-card">
-          <img src="BEEF KARE KARE.jpg" alt="Kare kare">
-          <div class="food-info">
-            <div class="food-name">Kare kare</div>
-            <div class="price">P65</div>
+
+        <!-- MENU FOOD CARDS -->
+        <div class="carousel">
+          <a href="#menu-first" class="arrow arrow-left" aria-label="Scroll left">&#10094;</a>
+
+          <div class="food-row" tabindex="0">
+
+            <div class="food-card" id="menu-first" data-menu-item data-category="SNACKS">
+              <img src="images/CHICKEN BBQ.jpg" alt="Chicken BBQ">
+              <div class="food-info">
+                <div class="food-name">Chicken Fingers</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card">
+              <img src="images/BEEF KARE KARE.jpg" alt="Kare kare">
+              <div class="food-info">
+                <div class="food-name">Kare kare</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card" data-menu-item data-category="LUNCH">
+              <img src="images/CHICKEN LIVER & BEANS ADOBO.jpg" alt="Chicken Liver & Beans">
+              <div class="food-info">
+                <div class="food-name">Chicken Liver & Beans</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card" data-menu-item data-category="LUNCH">
+              <img src="images/CREAMY CHICKEN MUSROOM BROCCOLI.jpg" alt="Chicken Mushroom">
+              <div class="food-info">
+                <div class="food-name">Chicken Mushroom</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card" data-menu-item data-category="LUNCH">
+              <img src="images/FRIED TILAPIA.jpg" alt="Fried Tilapia">
+              <div class="food-info">
+                <div class="food-name">Fried Tilapia</div>
+                <div class="price">P65</div>
+              </div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card" data-menu-item data-category="DESSERTS">
+              <img src="images/CHICKEN MUSHROOM.jpg" alt="Leche Flan">
+              <div class="food-info"><div class="food-name">Leche Flan</div><div class="price">P65</div></div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <div class="food-card" data-menu-item data-category="PACKAGES">
+              <img src="images/CHICKEN BBQ.jpg" alt="Family Food Package">
+              <div class="food-info"><div class="food-name">Family Food Package</div><div class="price">P650</div></div>
+              <button type="button" class="cart-btn">BUY NOW</button>
+            </div>
+
+            <!-- SELECT MORE (opens the pop-up) -->
+            <button type="button" class="food-card more-card" id="menu-last" popovertarget="more-popup">
+              <span class="more-icon">&#10095;</span>
+              <span class="more-text">Select more</span>
+            </button>
+
           </div>
-          <div class="cart-btn">ADD TO CART</div>
+
+          <a href="#menu-last" class="arrow arrow-right" aria-label="Scroll right">&#10095;</a>
         </div>
 
-        <!-- SELECT MORE (opens the pop-up) -->
-        <button type="button" class="food-card more-card" id="today-last" popovertarget="more-popup">
-          <span class="more-icon">&#10095;</span>
-          <span class="more-text">Select more</span>
-        </button>
+      </div><!-- /.container -->
+  </main>
 
+    <!-- FOOD CATALOG POP-UP: opens when the user clicks Select more / See all -->
+    <div id="more-popup" popover="manual" class="more-popup">
+      <button type="button" class="popup-close" popovertarget="more-popup" popovertargetaction="hide"
+        aria-label="Close">&times;</button>
+
+      <div class="popup-heading">
+        <div class="popup-brand-icon" aria-hidden="true">♡</div>
+        <div class="popup-heading-text">
+          <h2>More from our kitchen <span>♡</span></h2>
+          <p class="popup-description">Explore more of our homemade meals, snacks and special packages. Find your next
+            favorite dish!</p>
+        </div>
+        <label class="food-search">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="food-search-input" placeholder="Search food..." aria-label="Search food products">
+        </label>
       </div>
 
-      <a href="#today-last" class="arrow arrow-right" aria-label="Scroll right">&#10095;</a>
-    </div>
-
-
-    <!-- MENU -->
-    <div class="menu-header" id="menu">
-
-      <div class="menu-title">
-        Menu
+      <div class="popup-toolbar">
+        <div class="popup-categories" aria-label="Filter food category">
+          <button type="button" class="popup-category active" data-category="All">All</button>
+          <button type="button" class="popup-category" data-category="Lunch">Lunch</button>
+          <button type="button" class="popup-category" data-category="Snacks">Snacks</button>
+          <button type="button" class="popup-category" data-category="Desserts">Desserts</button>
+          <button type="button" class="popup-category" data-category="Packages">Packages</button>
+        </div>
+        <p class="popup-item-count"><span aria-hidden="true">♜</span> Showing <strong id="food-item-count">15</strong>
+          items</p>
       </div>
 
-      <div class="menu-tabs">
-        <div class="tab active">LUNCH</div>
-        <div class="tab">SNACKS</div>
-        <div class="tab">DESSERTS</div>
-        <div class="tab">PACKAGES</div>
+      <div class="popup-food-grid" id="popup-food-grid">
+        <article class="popup-food-card" data-name="nilaga" data-category="Lunch">
+          <img src="images/BEEF NILAGA.jpg" alt="Nilaga" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Nilaga</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="chicken afritada" data-category="Lunch">
+          <img src="images/CHICKEN AFRITADA.jpg" alt="Chicken Afritada" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Chicken Afritada</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="bicol express" data-category="Lunch">
+          <img src="images/BICOL EXPRESS.jpg" alt="Bicol Express" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Bicol Express</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="chicken fingers" data-category="Snacks">
+          <img src="images/chickenfingers.jpg" alt="Chicken Fingers" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Chicken Fingers</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="kare-kare" data-category="Lunch">
+          <img src="images/BEEF KARE KARE.jpg" alt="Kare-Kare" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Kare-Kare</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="chicken mushroom" data-category="Lunch">
+          <img src="images/CREAMY CHICKEN MUSROOM BROCCOLI.jpg" alt="Chicken Mushroom" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Chicken Mushroom</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="sweet and sour pork" data-category="Lunch">
+          <img src="images/CHICKEN AFRITADA.jpg" alt="Sweet and Sour Pork" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Sweet and Sour Pork</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="pancit bihon" data-category="Lunch">
+          <img src="CHICKEN MUSHROOM.jpg" alt="Pancit Bihon" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Pancit Bihon</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="spaghetti" data-category="Snacks">
+          <img src="BICOL EXPRESS.jpg" alt="Spaghetti" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Spaghetti</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="chicken adobo" data-category="Lunch">
+          <img src="CHICKEN AFRITADA.jpg" alt="Chicken Adobo" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Chicken Adobo</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="lumpiang shanghai" data-category="Snacks">
+          <img src="Chicken Fingers.jpg" alt="Lumpiang Shanghai" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Lumpiang Shanghai</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="garlic fried rice" data-category="Lunch">
+          <img src="Nilaga.jpg" alt="Garlic Fried Rice" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Garlic Fried Rice</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="pinakbet" data-category="Lunch">
+          <img src="BEEF KARE KARE.jpg" alt="Pinakbet" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Pinakbet</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="halo-halo" data-category="Desserts">
+          <img src="CHICKEN MUSHROOM.jpg" alt="Halo-Halo" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Halo-Halo</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+        <article class="popup-food-card" data-name="leche flan" data-category="Desserts">
+          <img src="BICOL EXPRESS.jpg" alt="Leche Flan" loading="lazy">
+          <div class="popup-food-info">
+            <h3>Leche Flan</h3>
+            <p>₱65</p>
+          </div>
+          <button type="button" class="popup-cart-btn">🛒 &nbsp; BUY NOW</button>
+        </article>
+      </div>
+      <p class="popup-no-results" id="popup-no-results" hidden>No food products found. Try another search.</p>
+    </div>
+
+
+    <!-- ORDER DETAILS POP-UP -->
+    <div class="order-modal" id="order-modal" popover="manual" aria-hidden="true">
+      <div class="order-modal-backdrop" data-close-order></div>
+      <section class="order-card" role="dialog" aria-modal="true" aria-labelledby="order-title">
+        <button type="button" class="order-close" data-close-order aria-label="Close order form">&times;</button>
+        <p class="order-eyebrow">CECILIA'S HOMEMADE FOODIES</p>
+        <h2 id="order-title">Customize your order ♡</h2>
+        <div class="order-product">
+          <img id="order-food-image" src="" alt="">
+          <div>
+            <h3 id="order-food-name">Food name</h3>
+            <p id="order-food-price">₱65</p>
+          </div>
+        </div>
+        <form id="order-form">
+          <label for="order-quantity">Number of servings</label>
+          <div class="quantity-control">
+            <button type="button" id="quantity-minus" aria-label="Decrease servings">−</button>
+            <input type="number" id="order-quantity" min="1" max="99" value="1" required>
+            <button type="button" id="quantity-plus" aria-label="Increase servings">+</button>
+          </div>
+          <label for="delivery-date">Delivery date</label>
+          <input type="date" id="delivery-date" required>
+          <label for="delivery-time">Preferred delivery time</label>
+          <input type="time" id="delivery-time" required>
+          <div class="order-total"><span>Total</span><strong id="order-total-price">₱65</strong></div>
+          <button type="submit" class="confirm-order-btn">Add order to cart</button>
+        </form>
+      </section>
+    </div>
+    <!-- REQUEST FORM POP-UP -->
+    <div class="request-modal" id="request-modal" popover="manual" aria-hidden="true">
+      <section class="request-card" role="dialog" aria-modal="true" aria-labelledby="request-title">
+        <button type="button" class="request-close" id="close-request" aria-label="Close request form">&times;</button>
+        <p class="order-eyebrow">CECILIA'S HOMEMADE FOODIES</p>
+        <h2 id="request-title">Make a Special Request ♡</h2>
+        <p class="request-intro">Tell us what you need and we'll prepare your request.</p>
+        <form id="request-form">
+          <label for="request-name">Your name</label>
+          <input id="request-name" name="name" type="text" placeholder="Enter your name" required>
+          <label for="request-contact">Contact number or email</label>
+          <input id="request-contact" name="contact" type="text" placeholder="How can we reach you?" required>
+          <label for="request-type">Request type</label>
+          <select id="request-type" name="type" required>
+            <option value="">Choose a request</option>
+            <option>Custom food order</option>
+            <option>Party or event package</option>
+            <option>Bulk order</option>
+            <option>Other inquiry</option>
+          </select>
+          <label for="request-details">Request details</label>
+          <textarea id="request-details" name="details" rows="4" placeholder="Tell us what you would like..." required></textarea>
+          <button type="submit" class="confirm-order-btn">Submit Request</button>
+        </form>
+        <p class="request-note">Demo form: your request will be shown as a confirmation on this page.</p>
+      </section>
+    </div>
+
+    <div class="order-toast" id="order-toast" role="status" aria-live="polite"></div>
+
+
+
+    <!-- SHOPPING CART POP-UP -->
+    <div class="cart-modal" id="cart-modal" popover="manual" aria-hidden="true">
+      <section class="cart-card" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <button type="button" class="cart-close" id="close-cart" aria-label="Close cart">&times;</button>
+        <p class="order-eyebrow">CECILIA'S HOMEMADE FOODIES</p>
+        <h2 id="cart-title">Your Shopping Cart ♡</h2>
+        <div id="cart-items" class="cart-items">
+          <p class="cart-empty">Your cart is empty. Add your favorite food!</p>
+        </div>
+        <div class="cart-summary"><span>Total</span><strong id="cart-grand-total">₱0</strong></div>
+        <button type="button" class="confirm-order-btn" id="checkout-cart">Continue to Order</button>
+      </section>
+    </div>
+
+    <!-- ORDER CONFIRMATION POP-UP -->
+    <div class="order-confirmation-modal" id="order-confirmation-modal" popover="manual" aria-hidden="true">
+      <section class="order-confirmation-card" role="dialog" aria-modal="true" aria-labelledby="confirmation-title">
+        <div class="confirmation-check" aria-hidden="true">✓</div>
+        <p class="order-eyebrow">CECILIA'S HOMEMADE FOODIES</p>
+        <h2 id="confirmation-title">ORDER CONFIRMED!</h2>
+        <p class="confirmation-message">Thank you for ordering with us! Your order summary is below.</p>
+        <p class="confirmation-reference" id="confirmation-reference"></p>
+        <div class="confirmation-items" id="confirmation-items"></div>
+        <div class="confirmation-total"><span>Total amount</span><strong id="confirmation-total">₱0</strong></div>
+        <button type="button" class="confirm-order-btn" id="close-confirmation">Done</button>
+      </section>
+    </div>
+
+    <script>
+      // Food catalog search and category filters
+      const foodSearchInput = document.getElementById('food-search-input');
+      const foodCategoryButtons = document.querySelectorAll('.popup-category');
+      const popupFoodCards = document.querySelectorAll('.popup-food-card');
+      const foodItemCount = document.getElementById('food-item-count');
+      const noFoodResults = document.getElementById('popup-no-results');
+      let selectedFoodCategory = 'All';
+
+      function filterPopupFoods() {
+        const searchTerm = foodSearchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+        popupFoodCards.forEach(card => {
+          const matchesName = card.dataset.name.includes(searchTerm);
+          const matchesCategory = selectedFoodCategory === 'All' || card.dataset.category === selectedFoodCategory;
+          const showCard = matchesName && matchesCategory;
+          card.hidden = !showCard;
+          if (showCard) visibleCount++;
+        });
+        foodItemCount.textContent = visibleCount;
+        noFoodResults.hidden = visibleCount !== 0;
+      }
+      foodSearchInput.addEventListener('input', filterPopupFoods);
+      foodCategoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          selectedFoodCategory = button.dataset.category;
+          foodCategoryButtons.forEach(item => item.classList.toggle('active', item === button));
+          filterPopupFoods();
+        });
+      });
+
+      // Order details modal: choose servings and preferred delivery date/time
+      const orderModal = document.getElementById('order-modal');
+      const orderForm = document.getElementById('order-form');
+      const quantityInput = document.getElementById('order-quantity');
+      const orderName = document.getElementById('order-food-name');
+      const orderPrice = document.getElementById('order-food-price');
+      const orderImage = document.getElementById('order-food-image');
+      const totalPrice = document.getElementById('order-total-price');
+      const toast = document.getElementById('order-toast');
+      let selectedProductPrice = 65;
+      let selectedProduct = '';
+      let selectedImage = '';
+      const orderCart = [];
+      const cartModal = document.getElementById('cart-modal');
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
+      const cartGrandTotal = document.getElementById('cart-grand-total');
+
+      function renderCart() {
+        const totalItems = orderCart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalItems;
+        cartItemsContainer.innerHTML = '';
+        if (orderCart.length === 0) {
+          cartItemsContainer.innerHTML = '<p class="cart-empty">Your cart is empty. Add your favorite food!</p>';
+        } else {
+          orderCart.forEach((item, index) => {
+            const row = document.createElement('div');
+            row.className = 'cart-item';
+            const image = document.createElement('img');
+            image.src = item.image;
+            image.alt = item.food;
+            const details = document.createElement('div');
+            details.className = 'cart-item-details';
+            const title = document.createElement('strong');
+            title.textContent = item.food;
+            const info = document.createElement('p');
+            info.textContent = `${item.quantity} serving(s) × ₱${item.price} · Delivery: ${item.deliveryDate} at ${item.deliveryTime}`;
+            const subtotal = document.createElement('strong');
+            subtotal.className = 'cart-item-subtotal';
+            subtotal.textContent = '₱' + (item.quantity * item.price).toLocaleString('en-PH');
+            const remove = document.createElement('button');
+            remove.type = 'button';
+            remove.className = 'remove-cart-item';
+            remove.textContent = 'Remove';
+            remove.addEventListener('click', () => { orderCart.splice(index, 1); renderCart(); });
+            details.append(title, info, subtotal, remove);
+            row.append(image, details);
+            cartItemsContainer.appendChild(row);
+          });
+        }
+        const grandTotal = orderCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        cartGrandTotal.textContent = '₱' + grandTotal.toLocaleString('en-PH');
+      }
+
+      function openCart() {
+        renderCart();
+        if (!cartModal.matches(':popover-open')) cartModal.showPopover();
+        cartModal.setAttribute('aria-hidden', 'false');
+      }
+      function closeCart() {
+        if (cartModal.matches(':popover-open')) cartModal.hidePopover();
+        cartModal.setAttribute('aria-hidden', 'true');
+      }
+      document.getElementById('open-cart').addEventListener('click', openCart);
+      document.getElementById('close-cart').addEventListener('click', closeCart);
+      const confirmationModal = document.getElementById('order-confirmation-modal');
+      const confirmationItems = document.getElementById('confirmation-items');
+      const confirmationTotal = document.getElementById('confirmation-total');
+      const confirmationReference = document.getElementById('confirmation-reference');
+
+      function closeConfirmation() {
+        if (confirmationModal.matches(':popover-open')) confirmationModal.hidePopover();
+        confirmationModal.setAttribute('aria-hidden', 'true');
+      }
+
+      document.getElementById('close-confirmation').addEventListener('click', closeConfirmation);
+      document.getElementById('checkout-cart').addEventListener('click', () => {
+        if (orderCart.length === 0) {
+          cartItemsContainer.innerHTML = '<p class="cart-empty">Your cart is empty. Add a food item first.</p>';
+          return;
+        }
+
+        // Save a snapshot of the cart for the confirmation screen before clearing it.
+        const confirmedItems = orderCart.map(item => ({ ...item }));
+        const confirmedTotal = confirmedItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        confirmationItems.innerHTML = '';
+
+        confirmedItems.forEach(item => {
+          const row = document.createElement('div');
+          row.className = 'confirmation-item';
+          const name = document.createElement('strong');
+          name.textContent = `${item.food} × ${item.quantity}`;
+          const schedule = document.createElement('span');
+          schedule.textContent = `Delivery: ${item.deliveryDate} at ${item.deliveryTime}`;
+          const subtotal = document.createElement('strong');
+          subtotal.textContent = '₱' + (item.price * item.quantity).toLocaleString('en-PH');
+          row.append(name, schedule, subtotal);
+          confirmationItems.appendChild(row);
+        });
+
+        confirmationTotal.textContent = '₱' + confirmedTotal.toLocaleString('en-PH');
+        confirmationReference.textContent = 'Order reference: CHF-' + Date.now().toString().slice(-8);
+        orderCart.length = 0;
+        renderCart();
+        closeCart();
+        if (!confirmationModal.matches(':popover-open')) confirmationModal.showPopover();
+        confirmationModal.setAttribute('aria-hidden', 'false');
+      });
+
+      function updateOrderTotal() {
+        let quantity = Number.parseInt(quantityInput.value, 10);
+        if (!Number.isFinite(quantity) || quantity < 1) quantity = 1;
+        if (quantity > 99) quantity = 99;
+        quantityInput.value = quantity;
+        totalPrice.textContent = '₱' + (selectedProductPrice * quantity).toLocaleString('en-PH');
+      }
+
+      function openOrderModal(card) {
+        const nameElement = card.querySelector('.food-name, .popup-food-info h3');
+        const priceElement = card.querySelector('.price, .popup-food-info p');
+        const imageElement = card.querySelector('img');
+        selectedProduct = nameElement.textContent.trim();
+        selectedImage = imageElement.getAttribute('src');
+        selectedProductPrice = Number(priceElement.textContent.replace(/[^0-9.]/g, '')) || 65;
+        orderName.textContent = selectedProduct;
+        orderPrice.textContent = '₱' + selectedProductPrice.toLocaleString('en-PH') + ' per serving';
+        orderImage.src = selectedImage;
+        orderImage.alt = selectedProduct;
+        quantityInput.value = 1;
+        const today = new Date();
+        const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        document.getElementById('delivery-date').min = localToday;
+        document.getElementById('delivery-date').value = localToday;
+        document.getElementById('delivery-time').value = '12:00';
+        updateOrderTotal();
+        // Show the order form in the browser's top layer, above the food catalog pop-up.
+        if (!orderModal.matches(':popover-open')) orderModal.showPopover();
+        orderModal.classList.add('open');
+        orderModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+      }
+
+      function closeOrderModal() {
+        orderModal.classList.remove('open');
+        if (orderModal.matches(':popover-open')) orderModal.hidePopover();
+        orderModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+
+      document.querySelectorAll('.popup-cart-btn').forEach(button => {
+        button.addEventListener('click', () => openOrderModal(button.closest('.popup-food-card')));
+      });
+      document.querySelectorAll('.cart-btn').forEach(button => {
+        button.setAttribute('role', 'button');
+        button.setAttribute('tabindex', '0');
+        button.addEventListener('click', () => openOrderModal(button.closest('.food-card')));
+        button.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openOrderModal(button.closest('.food-card'));
+          }
+        });
+      });
+      document.querySelectorAll('[data-close-order]').forEach(button => button.addEventListener('click', closeOrderModal));
+      document.getElementById('quantity-minus').addEventListener('click', () => {
+        quantityInput.value = Math.max(1, (Number.parseInt(quantityInput.value, 10) || 1) - 1);
+        updateOrderTotal();
+      });
+      document.getElementById('quantity-plus').addEventListener('click', () => {
+        quantityInput.value = Math.min(99, (Number.parseInt(quantityInput.value, 10) || 1) + 1);
+        updateOrderTotal();
+      });
+      quantityInput.addEventListener('input', updateOrderTotal);
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeOrderModal(); closeCart(); closeRequest(); closeConfirmation(); } });
+
+      // Main menu category tabs: show only products assigned to the selected category.
+      document.querySelectorAll('[data-menu-category]').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('[data-menu-category]').forEach(item => item.classList.toggle('active', item === tab));
+          const category = tab.dataset.menuCategory;
+          document.querySelectorAll('[data-menu-item]').forEach(card => {
+            card.hidden = card.dataset.category !== category;
+          });
+        });
+      });
+      document.querySelector('[data-menu-category].active')?.click();
+
+      orderForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const quantity = Number.parseInt(quantityInput.value, 10);
+        const deliveryDate = document.getElementById('delivery-date').value;
+        const deliveryTime = document.getElementById('delivery-time').value;
+        orderCart.push({ food: selectedProduct, price: selectedProductPrice, quantity, deliveryDate, deliveryTime, image: selectedImage });
+        renderCart();
+        closeOrderModal();
+        toast.textContent = `${quantity} serving(s) of ${selectedProduct} added to cart.`;
+        toast.classList.add('show');
+        window.setTimeout(() => toast.classList.remove('show'), 4500);
+        console.log('Current order cart:', orderCart);
+      });
+
+      // Request form popup (keeps visitors on the website instead of opening email).
+      const requestModal = document.getElementById('request-modal');
+      function openRequest() {
+        if (!requestModal.matches(':popover-open')) requestModal.showPopover();
+        requestModal.setAttribute('aria-hidden', 'false');
+      }
+      function closeRequest() {
+        if (requestModal.matches(':popover-open')) requestModal.hidePopover();
+        requestModal.setAttribute('aria-hidden', 'true');
+      }
+      document.getElementById('open-request').addEventListener('click', openRequest);
+      document.getElementById('close-request').addEventListener('click', closeRequest);
+      document.getElementById('footer-request-link').addEventListener('click', event => { event.preventDefault(); openRequest(); });
+      document.getElementById('request-form').addEventListener('submit', event => {
+        event.preventDefault();
+        const customer = document.getElementById('request-name').value.trim();
+        alert(`Thank you, ${customer}! Your request has been recorded for this demo. Please contact the business directly to confirm it.`);
+        event.currentTarget.reset();
+        closeRequest();
+      });
+    </script>
+
+<!-- ABOUT US SECTION -->
+<section class="about-strip" id="about-us">
+
+    <!-- LEFT: FOOD PHOTO -->
+    <div class="about-photo">
+        <img src="images/about us.png" alt="Cecilia's Homemade Meals">
+        <div class="photo-caption">
+            <span>Good Food</span>
+            <span>Happy Moments ♡</span>
+        </div>
+    </div>
+
+    <!-- MIDDLE: ABOUT US DESCRIPTION -->
+    <div class="about-description">
+        <div class="about-heading">
+            <span class="about-heart">♡</span>
+            <h2>About Us</h2>
+        </div>
+
+        <p>
+            Cecilia's Homemade Foodies is a small food business
+            that serves delicious homemade meals, snacks, and
+            packages. We put our heart into every dish, using
+            simple ingredients and fresh flavors to bring comfort
+            and joy to your table.
+        </p>
+
+        <p class="about-tagline">
+            Homemade food, for every occasion. ♡
+        </p>
+    </div>
+
+    <!-- RIGHT: BUSINESS FEATURES -->
+    <div class="about-services">
+
+        <div class="about-service">
+            <div class="service-icon">🍴</div>
+            <h3>Lunch</h3>
+            <p>Meals</p>
+        </div>
+
+        <div class="about-service">
+            <div class="service-icon">♧</div>
+            <h3>Snacks</h3>
+            <p>&amp; Treats</p>
+        </div>
+
+        <div class="about-service">
+            <div class="service-icon">♙</div>
+            <h3>Packages</h3>
+            <p>for Any Occasion</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+
+      <div class="footer-container">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Cecilia's Homemade Foodies Logo">
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#">Menu</a>
+          <a href="#" id="footer-request-link">Request</a>
+          <a href="#">About Us</a>
+        </div>
+
+        <!-- FOLLOW US -->
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/ceciliashomemadefoodies/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Visit Cecilia’s Homemade Foodies on Facebook">
+              <img
+                src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/960px-2023_Facebook_icon.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+                alt="Facebook">
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+                alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- CONTACT US -->
+        <div class="footer-column contact-column">
+          <h3>Contact Us</h3>
+          <p>
+            <span class="icon">✉</span>
+            ceciliafoodies@gmail.com
+          </p>
+          <p>
+            <span class="icon">●</span>
+            Taytay, Rizal, Philippines
+          </p>
+        </div>
       </div>
 
-    </div>
-
-
-    <!-- MENU FOOD CARDS -->
-    <div class="carousel">
-      <a href="#menu-first" class="arrow arrow-left" aria-label="Scroll left">&#10094;</a>
-
-      <div class="food-row" tabindex="0">
-
-        <div class="food-card" id="menu-first">
-          <img src="Chicken Fingers.jpg" alt="Chicken Fingers">
-          <div class="food-info">
-            <div class="food-name">Chicken Fingers</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-
-        <div class="food-card">
-          <img src="BEEF KARE KARE.jpg" alt="Kare kare">
-          <div class="food-info">
-            <div class="food-name">Kare kare</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-
-        <div class="food-card">
-          <img src="CHICKEN MUSHROOM.jpg" alt="Chicken Mushroom">
-          <div class="food-info">
-            <div class="food-name">Chicken Mushroom</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-
-        <div class="food-card">
-          <img src="CHICKEN MUSHROOM.jpg" alt="Chicken Mushroom">
-          <div class="food-info">
-            <div class="food-name">Chicken Mushroom</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-
-        <div class="food-card">
-          <img src="CHICKEN MUSHROOM.jpg" alt="Chicken Mushroom">
-          <div class="food-info">
-            <div class="food-name">Chicken Mushroom</div>
-            <div class="price">P65</div>
-          </div>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-
-        <!-- SELECT MORE (opens the pop-up) -->
-        <button type="button" class="food-card more-card" id="menu-last" popovertarget="more-popup">
-          <span class="more-icon">&#10095;</span>
-          <span class="more-text">Select more</span>
-        </button>
-
+      <!-- COPYRIGHT -->
+      <div class="footer-bottom">
+        <p>
+          © 2026 Cecilia's Homemade Foodies.
+          All rights reserved.
+          <span class="heart">♡</span>
+        </p>
       </div>
-
-      <a href="#menu-last" class="arrow arrow-right" aria-label="Scroll right">&#10095;</a>
-    </div>
-
-  </div><!-- /.container -->
-</main>
-
-
-<!-- POP-UP (opened by the "Select more" buttons) -->
-<div id="more-popup" popover class="more-popup">
-  <button type="button" class="popup-close" popovertarget="more-popup" popovertargetaction="hide" aria-label="Close">&times;</button>
-  <h2>More from our kitchen</h2>
-  <p>Put whatever you want here: extra dishes, a link to the full menu, a request form...</p>
-</div>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="footer-container">
-
-    <!-- LOGO -->
-    <div class="footer-logo">
-      <img src="New_logo.png" alt="Cecilia's Homemade Foodies Logo">
-    </div>
-
-    <!-- QUICK LINKS -->
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <a href="#">Home</a>
-      <a href="#">Menu</a>
-      <a href="#">Request</a>
-      <a href="#">About Us</a>
-    </div>
-
-    <!-- FOLLOW US -->
-    <div class="footer-column">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#" class="social-link">
-          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/960px-2023_Facebook_icon.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Facebook">
-        </a>
-        <a href="#" class="social-link">
-          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Instagram">
-        </a>
-      </div>
-    </div>
-
-    <!-- CONTACT US -->
-    <div class="footer-column contact-column">
-      <h3>Contact Us</h3>
-      <p>
-        <span class="icon">✉</span>
-        ceciliafoodies@gmail.com
-      </p>
-      <p>
-        <span class="icon">●</span>
-        Taytay, Rizal, Philippines
-      </p>
-    </div>
-  </div>
-
-  <!-- COPYRIGHT -->
-  <div class="footer-bottom">
-    <p>
-      © 2026 Cecilia's Homemade Foodies.
-      All rights reserved.
-      <span class="heart">♡</span>
-    </p>
-  </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>
